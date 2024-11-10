@@ -5,6 +5,7 @@
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: "Inter";
   src: url("../fonts/Inter-Medium.woff2") format("woff2");
@@ -12,6 +13,7 @@
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: "Inter";
   src: url("../fonts/Inter-SemiBold.woff2") format("woff2");
@@ -19,6 +21,7 @@
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: "Inter";
   src: url("../fonts/Inter-Bold.woff2") format("woff2");
@@ -26,23 +29,3 @@
   font-style: normal;
   font-display: swap;
 }
-:root {
-  --color-dark: #2c2d2e;
-  --color-gray: #919399;
-  --color-light: #ffffff;
-  --color-beige-light: #fbfbfb;
-  --color-accent: #ff6743;
-  --border-radius: 24px;
-  --border-radius-small: 16px;
-  --border-radius-large: 0px 0px 100px 100px;
-  --border-radius-button: 30px;
-  --shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.08);
-  --font-family-base: "Inter", sans-serif;
-  --container-width: 1240px;
-  --conttainer-padding-x: 20px;
-  --section-padding-y: 120px;
-  --input-height: 38px;
-  --input-height-large: 46px;
-  --button-height: 56px;
-  --transition-duration: 0.2s;
-}/*# sourceMappingURL=styles.css.map */
