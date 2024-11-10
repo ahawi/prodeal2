@@ -1,0 +1,63 @@
+.header {
+  padding-block: 15px;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 79px;
+  }
+
+  &__menu {
+    &-list {
+      display: flex;
+      align-items: center;
+      column-gap: 48px;
+    }
+
+    &-link {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      height: 30px;
+
+      @include hover {
+        &::after {
+          width: 100%;
+        }
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        translate: -50%;
+        width: 0;
+        height: 2px;
+        background-color: currentColor;
+        transition-duration: inherit;
+      }
+    }
+  }
+
+  &__right-block {
+    display: flex;
+
+    &-info {
+      position: relative;
+
+      &::before {
+        @include square(8px);
+
+        content: "";
+        position: absolute;
+        top: 34%;
+        left: -10%;
+        translate: 10%;
+        background-color: #0dc268;
+        border-radius: 50%;
+      }
+    }
+  }
+}

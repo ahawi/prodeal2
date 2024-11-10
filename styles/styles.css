@@ -153,8 +153,15 @@ svg * {
 }
 @font-face {
   font-family: "Inter";
+  src: url("../fonts/Inter-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
   src: url("../fonts/Inter-Regular.woff2") format("woff2");
-  font-weight: 400;
+  font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
@@ -172,13 +179,6 @@ svg * {
   font-style: normal;
   font-display: swap;
 }
-@font-face {
-  font-family: "Inter";
-  src: url("../fonts/Inter-Bold.woff2") format("woff2");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
 :root {
   --color-dark: #2c2d2e;
   --color-gray: #919399;
@@ -192,7 +192,7 @@ svg * {
   --shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.08);
   --font-family-base: "Inter", sans-serif;
   --container-width: 1240px;
-  --conttainer-padding-x: 20px;
+  --container-padding-x: 20px;
   --section-padding-y: 120px;
   --input-height: 38px;
   --input-height-large: 46px;
@@ -268,4 +268,65 @@ h3,
 h4,
 .h4 {
   font-size: clamp(16px, 1.3888888889vw, 20px);
+}
+
+.header {
+  padding-block: 15px;
+}
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  -moz-column-gap: 79px;
+       column-gap: 79px;
+}
+.header__menu-list {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 48px;
+       column-gap: 48px;
+}
+.header__menu-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  height: 30px;
+}
+@media (hover: hover) {
+  .header__menu-link:hover::after {
+    width: 100%;
+  }
+}
+@media (hover: none) {
+  .header__menu-link:active::after {
+    width: 100%;
+  }
+}
+.header__menu-link::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  translate: -50%;
+  width: 0;
+  height: 2px;
+  background-color: currentColor;
+  transition-duration: inherit;
+}
+.header__right-block {
+  display: flex;
+}
+.header__right-block-info {
+  position: relative;
+}
+.header__right-block-info::before {
+  width: 8px;
+  aspect-ratio: 1;
+  content: "";
+  position: absolute;
+  top: 34%;
+  left: -10%;
+  translate: 10%;
+  background-color: #0dc268;
+  border-radius: 50%;
 }/*# sourceMappingURL=styles.css.map */
