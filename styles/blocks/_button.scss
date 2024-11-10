@@ -1,0 +1,31 @@
+.button {
+  @include flex-center(true);
+
+  height: var(--button-height);
+  padding: 12px 40px;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--color-light);
+  background-color: var(--color-accent);
+  border: none;
+  border-radius: var(--border-radius-button);
+
+  @include hover {
+    color: var(--color-dark);
+    background-color: var(--color-light);
+  }
+
+  @include mobile {
+    font-size: 16px;
+    padding-inline: 30px;
+  }
+
+  &--accent {
+    color: var(--color-light);
+    background-color: var(--color-dark);
+
+    @include hover {
+      background-color: var(--color-accent);
+    }
+  }
+}
