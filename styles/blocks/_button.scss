@@ -15,17 +15,16 @@
     background-color: var(--color-light);
   }
 
-  @include mobile {
-    font-size: 16px;
-    padding-inline: 30px;
-  }
-
   &--accent {
     color: var(--color-light);
     background-color: var(--color-dark);
 
     @include hover {
       background-color: var(--color-accent);
+    }
+
+    @include mobile {
+      font-size: 16px;
     }
   }
 }

@@ -1,0 +1,9 @@
+.bg-dark {
+  background-color: var(--color-dark);
+
+  &__hero {
+    background-color: var(--color-dark);
+    border-radius: var(--border-radius-large);
+    max-width: 1440px;
+  }
+}
