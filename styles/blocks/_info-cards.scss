@@ -1,0 +1,20 @@
+.info-cards {
+  &__list {
+    margin-block: -76px ;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 32px;
+  }
+
+  &__item {
+    background-color: var(--color-light);
+    border-radius: var(--border-radius);
+    width: 379px;
+    height: 370px;
+    box-shadow: var(--shadow);
+    padding: 32px 28px;
+    
+  }
+}
