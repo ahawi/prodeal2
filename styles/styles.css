@@ -553,4 +553,58 @@ h4,
   background-color: var(--color-dark);
   border-radius: var(--border-radius-large);
   max-width: 1440px;
+}
+
+.info-card__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+}
+.info-card__link-title {
+  position: relative;
+  font-size: 32px;
+  padding-bottom: 24px;
+}
+.info-card__link-title::after {
+  position: absolute;
+  content: "";
+  width: 32px;
+  aspect-ratio: 1;
+  top: 15%;
+  left: 90%;
+  background-image: url("../../images/arrow-right.svg");
+}
+.info-card__title {
+  position: relative;
+  font-size: 16px;
+  font-weight: 300;
+  padding-left: 32px;
+  width: 320px;
+}
+.info-card__title::before {
+  position: absolute;
+  content: "";
+  width: 24px;
+  aspect-ratio: 1;
+  top: 0;
+  left: 0;
+  background-image: url("../../images/check-mark.svg");
+}
+
+.info-cards__list {
+  margin-block: -76px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  -moz-column-gap: 32px;
+       column-gap: 32px;
+}
+.info-cards__item {
+  background-color: var(--color-light);
+  border-radius: var(--border-radius);
+  width: 379px;
+  height: 370px;
+  box-shadow: var(--shadow);
+  padding: 32px 28px;
 }/*# sourceMappingURL=styles.css.map */
