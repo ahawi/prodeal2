@@ -7,7 +7,7 @@
 
   &__link-title {
     position: relative;
-    font-size: 32px;
+    font-size: clamp(20px, 2.22vw, 32px);
     padding-bottom: 24px;
 
     &::after {
@@ -18,15 +18,26 @@
       top: 15%;
       left: 90%;
       background-image: url("../../images/arrow-right.svg");
+
+      @include desktop {
+        width: 24px;
+        aspect-ratio: 1;
+        top: 3%;
+      }
+
+      @include tablet {
+        top: 0;
+        left: 95%;
+      }
     }
   }
 
   &__title {
     position: relative;
     font-size: 16px;
-    font-weight: 300;
+    font-weight: 400;
     padding-left: 32px;
-    width: 320px;
+    // max-width: 320px;
 
     &::before {
       position: absolute;

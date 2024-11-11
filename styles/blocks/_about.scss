@@ -1,0 +1,47 @@
+.about {
+  &__body {
+    width: 503px;
+    height: 297px;
+  }
+
+  &__title {
+    padding-bottom: 40px;
+  }
+
+  &__main {
+    display: flex;
+    align-items: center;
+    column-gap: 113px;
+  }
+
+  &__item {
+    box-shadow: var(--shadow);
+    padding: 12px 16px;
+    border-radius: 100px;
+
+    &-title {
+      font-size: 22px;
+      font-weight: 400;
+      color: var(--color-gray-dark);
+    }
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+
+    &-info {
+      line-height: 1.3;
+      width: 505px;
+      font-size: 28px;
+      font-weight: 300;
+    }
+  }
+
+  &__description-blockquote {
+    width: 521px;
+    display: flex;
+    column-gap: 16px;
+  }
+}
