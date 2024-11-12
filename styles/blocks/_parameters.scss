@@ -1,0 +1,17 @@
+.parameters {
+  display: flex;
+  flex-direction: column;
+  padding-top: 16px;
+  row-gap: 18px;
+  font-size: 14px;
+
+  &__group {
+    display: flex;
+    justify-content: space-between;
+
+    @include tablet {
+      flex-direction: column;
+      padding-top: 0;
+    }
+  }
+}

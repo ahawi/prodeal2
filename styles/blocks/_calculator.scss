@@ -1,0 +1,27 @@
+.calculator {
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+  padding: 60px;
+  color: var(--color-light);
+
+  &__body {
+    display: flex;
+    justify-content: center;
+    column-gap: 32px;
+
+  }
+
+  &__item {
+    width: 339px;
+    height: auto;
+
+    @include desktop {
+      min-width: 210px;
+    }
+  }
+
+  &__button {
+    align-self: start;
+  }
+}

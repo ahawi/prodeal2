@@ -1,17 +1,13 @@
 .about {
-  &__body {
-    width: 503px;
-    height: 297px;
-  }
-
-  &__title {
-    padding-bottom: 40px;
-  }
-
   &__main {
     display: flex;
     align-items: center;
     column-gap: 113px;
+  }
+
+  &__body {
+    width: 503px;
+    height: 297px;
   }
 
   &__item {
@@ -43,5 +39,6 @@
     width: 521px;
     display: flex;
     column-gap: 16px;
+    line-height: 1.5;
   }
 }

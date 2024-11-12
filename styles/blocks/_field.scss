@@ -1,0 +1,49 @@
+.field {
+  --fieldInputBorderRadius: 6px;
+  --fieldInputPaddingInline: 11px;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 7px;
+  border: 2px solid transparent;
+
+  &::placeholder {
+    color: var(--color-gray);
+  }
+
+  &:focus {
+    border-color: var(--color-accent);
+    outline: none;
+  }
+
+  &__input {
+    @include flex-center;
+
+    height: var(--input-height);
+    border-radius: var(--fieldInputBorderRadius);
+    padding-inline: var(--fieldInputPaddingInline);
+
+    &-small {
+      @include flex-center;
+
+      height: var(--input-height);
+      max-width: 100px;
+      border-radius: var(--fieldInputBorderRadius);
+      padding-inline: var(--fieldInputPaddingInline);
+    }
+
+    &-medium {
+      @include flex-center;
+
+      height: var(--input-height);
+      max-width: 159px;
+      border-radius: var(--fieldInputBorderRadius);
+      padding-inline: var(--fieldInputPaddingInline);
+    }
+  }
+
+  &__city,
+  &__label {
+    color: var(--color-gray);
+  }
+}

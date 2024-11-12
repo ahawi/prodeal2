@@ -9,26 +9,26 @@
 }
 
 /**
-   Убираем внутренние отступы слева тегам списков,
-   у которых есть атрибут class
-  */
+    Убираем внутренние отступы слева тегам списков,
+    у которых есть атрибут class
+   */
 :where(ul, ol):where([class]) {
   padding-left: 0;
 }
 
 /**
-   Убираем внешние отступы body и двум другим тегам,
-   у которых есть атрибут class
-  */
+    Убираем внешние отступы body и двум другим тегам,
+    у которых есть атрибут class
+   */
 body,
 :where(blockquote, figure):where([class]) {
   margin: 0;
 }
 
 /**
-   Убираем внешние отступы вертикали нужным тегам,
-   у которых есть атрибут class
-  */
+    Убираем внешние отступы вертикали нужным тегам,
+    у которых есть атрибут class
+   */
 :where(h1, h2, h3, h4, h5, h6, p, ul, ol, dl):where([class]) {
   margin-block: 0;
 }
@@ -44,9 +44,9 @@ body,
 }
 
 /**
-   Убираем стандартный маркер маркированному списку,
-   у которого есть атрибут class
-  */
+    Убираем стандартный маркер маркированному списку,
+    у которого есть атрибут class
+   */
 :where(ul[class]) {
   list-style: none;
 }
@@ -56,34 +56,34 @@ body,
 }
 
 /**
-   Обнуляем вертикальные внешние отступы параграфа,
-   объявляем локальную переменную для внешнего отступа вниз,
-   чтобы избежать взаимодействие с более сложным селектором
-  */
+    Обнуляем вертикальные внешние отступы параграфа,
+    объявляем локальную переменную для внешнего отступа вниз,
+    чтобы избежать взаимодействие с более сложным селектором
+   */
 p {
   --paragraphMarginBottom: 24px;
   margin-block: 0;
 }
 
 /**
-   Внешний отступ вниз для параграфа без атрибута class,
-   который расположен не последним среди своих соседних элементов
-  */
+    Внешний отступ вниз для параграфа без атрибута class,
+    который расположен не последним среди своих соседних элементов
+   */
 p:where(:not([class]):not(:last-child)) {
   margin-bottom: var(--paragraphMarginBottom);
 }
 
 /**
-   Упрощаем работу с изображениями
-  */
+    Упрощаем работу с изображениями
+   */
 img {
   display: block;
   max-width: 100%;
 }
 
 /**
-   Наследуем свойства шрифт для полей ввода
-  */
+    Наследуем свойства шрифт для полей ввода
+   */
 input,
 textarea,
 select,
@@ -91,17 +91,25 @@ button {
   font: inherit;
 }
 
+/** Скрыть стрелки при инпуте
+**/
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 html {
   /**
-     Пригодится в большинстве ситуаций
-     (когда, например, нужно будет "прижать" футер к низу сайта)
-    */
+      Пригодится в большинстве ситуаций
+      (когда, например, нужно будет "прижать" футер к низу сайта)
+     */
   height: 100%;
 }
 
 /**
-   Плавный скролл
-  */
+    Плавный скролл
+   */
 html,
 :has(:target) {
   scroll-behavior: smooth;
@@ -109,19 +117,19 @@ html,
 
 body {
   /**
-     Пригодится в большинстве ситуаций
-     (когда, например, нужно будет "прижать" футер к низу сайта)
-    */
+      Пригодится в большинстве ситуаций
+      (когда, например, нужно будет "прижать" футер к низу сайта)
+     */
   min-height: 100%;
   /**
-     Унифицированный интерлиньяж
-    */
-  line-height: 1.5;
+      Унифицированный интерлиньяж
+     */
+  line-height: 1.2;
 }
 
 /**
-   Приводим к единому цвету svg-элементы
-  */
+    Приводим к единому цвету svg-элементы
+   */
 svg *[fill] {
   fill: currentColor;
 }
@@ -131,16 +139,16 @@ svg *[stroke] {
 }
 
 /**
-   Чиним баг задержки смены цвета при взаимодействии с svg-элементами
-  */
+    Чиним баг задержки смены цвета при взаимодействии с svg-элементами
+   */
 svg * {
   transition-property: fill, stroke;
 }
 
 /**
-   Удаляем все анимации и переходы для людей,
-   которые предпочитают их не использовать
-  */
+    Удаляем все анимации и переходы для людей,
+    которые предпочитают их не использовать
+   */
 @media (prefers-reduced-motion: reduce) {
   *,
   ::before,
@@ -197,9 +205,9 @@ svg * {
   --border-radius-small: 16px;
   --border-radius-large: 0px 0px 100px 100px;
   --border-radius-button: 30px;
-  --shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.08);
+  --shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.08);
   --font-family-base: "Inter", sans-serif;
-  --container-width: 1240px;
+  --container-width: 1200px;
   --container-padding-x: 20px;
   --section-padding-y: 120px;
   --input-height: 38px;
@@ -561,6 +569,7 @@ h4,
 
 .bg-dark {
   background-color: var(--color-dark);
+  border-radius: var(--border-radius);
 }
 .bg-dark__hero {
   background-color: var(--color-dark);
@@ -610,6 +619,7 @@ h4,
   font-size: 16px;
   font-weight: 400;
   padding-left: 32px;
+  line-height: 1.4;
 }
 .info-card__title::before {
   position: absolute;
@@ -657,18 +667,15 @@ h4,
   }
 }
 
-.about__body {
-  width: 503px;
-  height: 297px;
-}
-.about__title {
-  padding-bottom: 40px;
-}
 .about__main {
   display: flex;
   align-items: center;
   -moz-column-gap: 113px;
        column-gap: 113px;
+}
+.about__body {
+  width: 503px;
+  height: 297px;
 }
 .about__item {
   box-shadow: var(--shadow);
@@ -696,46 +703,240 @@ h4,
   display: flex;
   -moz-column-gap: 16px;
        column-gap: 16px;
+  line-height: 1.5;
 }
 
 .grid {
+  --gridColumns: 1;
   display: grid;
-  grid-template-columns: 231px 264px; /* 2 колонки для первого ряда */
-  grid-template-rows: auto auto auto auto auto; /* 5 строк */
-  gap: 8px; /* Зазор между блоками */
+  grid-template-columns: repeat(var(--gridColumns), 1fr);
+  gap: 32px;
+}
+@media (max-width: 1280px) {
+  .grid {
+    gap: 20px;
+  }
+}
+.grid--2 {
+  --gridColumns: 2;
+}
+.grid--3 {
+  --gridColumns: 3;
+}
+.grid--4 {
+  --gridColumns: 4;
+}
+.grid--5 {
+  --gridColumns: 5;
+}
+.grid--6 {
+  --gridColumns: 6;
+}
+.grid--7 {
+  --gridColumns: 7;
+}
+.grid--8 {
+  --gridColumns: 8;
+}
+.grid--9 {
+  --gridColumns: 9;
+}
+.grid--10 {
+  --gridColumns: 10;
+}
+.grid--11 {
+  --gridColumns: 11;
+}
+.grid--12 {
+  --gridColumns: 12;
+}
+@media (max-width: 1023px) {
+  .grid--2 {
+    --gridColumns: 1;
+  }
+}
+@media (max-width: 1280px) {
+  .grid--3 {
+    --gridColumns: 2;
+  }
+}
+@media (max-width: 767px) {
+  .grid--3 {
+    --gridColumns: 1;
+  }
 }
 
-.grid-item:nth-child(1) {
-  grid-column: span 1;
-  width: 231px; /* Ширина первого блока */
+.title {
+  padding-bottom: 40px;
+}
+.title-info {
+  padding-bottom: 16px;
+  border-bottom: 1px solid #EBEBEB;
+  font-size: clamp(16px, 1.39vw, 20px);
 }
 
-.grid-item:nth-child(2) {
-  grid-column: span 1;
-  width: 264px; /* Ширина второго блока */
+.how-it-works-card {
+  display: flex;
+  -moz-column-gap: 15px;
+       column-gap: 15px;
+  align-items: center;
+  padding: 16px;
+  box-shadow: var(--shadow);
+  border-radius: var(--border-radius-small);
+}
+.how-it-works-card__title {
+  font-size: clamp(16px, 1.53vw, 22px);
 }
 
-.grid-item:nth-child(3) {
-  grid-column: span 2; /* Блок занимает всю ширину второго ряда */
-  width: 315px; /* Ширина третьего блока */
+.calculator {
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+  padding: 60px;
+  color: var(--color-light);
+}
+.calculator__body {
+  display: flex;
+  justify-content: center;
+  -moz-column-gap: 32px;
+       column-gap: 32px;
+}
+.calculator__item {
+  width: 339px;
+  height: auto;
+}
+@media (max-width: 1280px) {
+  .calculator__item {
+    min-width: 210px;
+  }
+}
+.calculator__button {
+  align-self: start;
 }
 
-.grid-item:nth-child(4) {
-  grid-column: span 2; /* Блок занимает всю ширину третьего ряда */
-  width: 448px; /* Ширина четвертого блока */
+.field {
+  --fieldInputBorderRadius: 6px;
+  --fieldInputPaddingInline: 11px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 7px;
+  border: 2px solid transparent;
+}
+.field::-moz-placeholder {
+  color: var(--color-gray);
+}
+.field::placeholder {
+  color: var(--color-gray);
+}
+.field:focus {
+  border-color: var(--color-accent);
+  outline: none;
+}
+.field__input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: var(--input-height);
+  border-radius: var(--fieldInputBorderRadius);
+  padding-inline: var(--fieldInputPaddingInline);
+}
+.field__input-small {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: var(--input-height);
+  max-width: 100px;
+  border-radius: var(--fieldInputBorderRadius);
+  padding-inline: var(--fieldInputPaddingInline);
+}
+.field__input-medium {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: var(--input-height);
+  max-width: 159px;
+  border-radius: var(--fieldInputBorderRadius);
+  padding-inline: var(--fieldInputPaddingInline);
+}
+.field__city, .field__label {
+  color: var(--color-gray);
 }
 
-.grid-item:nth-child(5) {
-  grid-column: span 2; /* Блок занимает всю ширину четвертого ряда */
-  width: 286px; /* Ширина пятого блока */
+.product-info {
+  max-width: 339px;
 }
 
-.grid-item:nth-child(6) {
-  grid-column: span 1; /* Блок занимает одну ячейку в пятом ряду */
-  width: 261px; /* Ширина шестого блока */
+.shipping-info {
+  display: flex;
+  -moz-column-gap: 32px;
+       column-gap: 32px;
 }
 
-.grid-item:nth-child(7) {
-  grid-column: span 1; /* Блок занимает одну ячейку в пятом ряду */
-  width: 231px; /* Ширина седьмого блока */
+.radios {
+  display: flex;
+  flex-direction: column;
+  row-gap: 18px;
+  margin-top: 7px;
+}
+
+.radio {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 14px;
+       column-gap: 14px;
+  transition-duration: var(--transition-duration);
+}
+@media (hover: hover) {
+  .radio:hover {
+    opacity: 0.6;
+  }
+}
+@media (hover: none) {
+  .radio:active {
+    opacity: 0.6;
+  }
+}
+.radio__input:not(:checked) + .radio__emulator::after {
+  opacity: 0;
+}
+.radio__emulator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 18px;
+  aspect-ratio: 1;
+  position: relative;
+  background-color: var(--color-light);
+  border: var(--border);
+  border-radius: 50%;
+}
+.radio__emulator::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  width: 60%;
+  aspect-ratio: 1;
+  content: "";
+  background-color: var(--color-accent);
+  border-radius: inherit;
+  transition-duration: var(--transition-duration);
+}
+
+.parameters {
+  display: flex;
+  flex-direction: column;
+  padding-top: 16px;
+  row-gap: 18px;
+  font-size: 14px;
+}
+.parameters__group {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 1023px) {
+  .parameters__group {
+    flex-direction: column;
+    padding-top: 0;
+  }
 }/*# sourceMappingURL=styles.css.map */
