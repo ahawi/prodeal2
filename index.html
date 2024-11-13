@@ -215,7 +215,7 @@
         </div>
       </section>
 
-      <section class="section">
+      <!-- <section class="section">
         <div class="section__body container">
           <div class="about">
             <h2 class="about__title title">О сервисе Prodeal</h2>
@@ -246,7 +246,7 @@
                     <h3 class="about__item-title">Быстрая доставка</h3>
                   </li>
                 </ul> -->
-              </div>
+      <!-- </div>
               <div class="about__description">
                 <div class="about__description-info">
                   <p>
@@ -273,7 +273,7 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
 
       <section class="section">
         <div class="section__body container">
@@ -414,9 +414,9 @@
         </div>
       </section>
 
-      <section class="section container">
-        <div class="section__body bg-dark">
-          <div class="calculator">
+      <section class="section">
+        <div class="section__body bg-dark bg-dark__container">
+          <div class="calculator container">
             <h2 class="calculator__title">
               Калькулятор <br />
               безопасной сделки
@@ -428,7 +428,7 @@
                     Информация о товаре
                   </h3>
                   <div class="product-info parameters">
-                    <div class="product-info parameters__group">
+                    <div class="product-info parameters__product-group">
                       <div class="product-info__item">
                         <div class="product-info__field field">
                           <label class="field__label" for="length"
@@ -475,7 +475,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="product-info parameters__group">
+                    <div class="product-info parameters__product-group">
                       <div class="product-info__item">
                         <div class="product-info__field field">
                           <label class="field__label" for="weight"
@@ -509,103 +509,105 @@
                   </div>
                 </div>
 
-                <div class="shipping-info">
-                  <div class="calculator__item">
-                    <h3 class="shipping-info__title title-info">
-                      Информация по отправке
-                    </h3>
-                    <div class="shipping-info parameters">
-                      <div class="shipping-info__field field">
-                        <label for="city" class="field__city"
-                          >Город отправки
-                        </label>
-                        <input
-                          type="text"
-                          class="field__input field"
-                          id="city"
-                          name="city"
-                          placeholder="Например: Москва"
-                        />
-                      </div>
-                      <fieldset class="shipping-info__delivery-types radios">
-                        <legend class="radios__title visually-hidden">
-                          Тип доставки до ПВЗ
-                        </legend>
-
-                        <label class="radios__item radio">
-                          <input
-                            class="radio__input visually-hidden"
-                            name="shipping-type"
-                            type="radio"
-                            value="Забрать от двери"
-                            checked
-                          />
-                          <span class="radio__emulator"></span>
-                          <span class="radio__label">Забрать от двери</span>
-                        </label>
-
-                        <label class="radios__item radio">
-                          <input
-                            class="radio__input visually-hidden"
-                            name="shipping-type"
-                            type="radio"
-                            value="Самостоятельная доставка до ПВЗ"
-                          />
-                          <span class="radio__emulator"></span>
-                          <span class="radio__label"
-                            >Самостоятельная доставка до ПВЗ</span
-                          >
-                        </label>
-                      </fieldset>
+                <div
+                  class="calculator__item calculator__item-shipping shipping-info"
+                >
+                  <h3 class="shipping-info__title title-info">
+                    Информация по отправке
+                  </h3>
+                  <div class="shipping-info parameters">
+                    <div class="shipping-info__field field">
+                      <label for="city" class="field__city"
+                        >Город отправки
+                      </label>
+                      <input
+                        type="text"
+                        class="field__input field"
+                        id="city"
+                        name="city"
+                        placeholder="Например: Москва"
+                      />
                     </div>
+                    <fieldset class="shipping-info__delivery-types radios">
+                      <legend class="radios__title visually-hidden">
+                        Тип доставки до ПВЗ
+                      </legend>
+
+                      <label class="radios__item radio">
+                        <input
+                          class="radio__input visually-hidden"
+                          name="shipping-type"
+                          type="radio"
+                          value="Забрать от двери"
+                          checked
+                        />
+                        <span class="radio__emulator"></span>
+                        <span class="radio__label">Забрать от двери</span>
+                      </label>
+
+                      <label class="radios__item radio">
+                        <input
+                          class="radio__input visually-hidden"
+                          name="shipping-type"
+                          type="radio"
+                          value="Самостоятельная доставка до ПВЗ"
+                        />
+                        <span class="radio__emulator"></span>
+                        <span class="radio__label"
+                          >Самостоятельная доставка до ПВЗ</span
+                        >
+                      </label>
+                    </fieldset>
                   </div>
+                </div>
 
-                  <div class="calculator__item">
-                    <h3 class="shipping-info__title title-info">
-                      Информация о доставке
-                    </h3>
-                    <div class="shipping-info parameters">
-                      <div class="shipping-info__field field">
-                        <label for="city" class="field__city"
-                          >Город получения
-                        </label>
-                        <input
-                          type="text"
-                          class="field__input field"
-                          id="city"
-                          name="city"
-                          placeholder="Например: Санкт-Петербург"
-                        />
-                      </div>
-                      <fieldset class="shipping-info__delivery-types radios">
-                        <legend class="radios__title visually-hidden">
-                          Вариант получения
-                        </legend>
-
-                        <label class="radios__item radio">
-                          <input
-                            class="radio__input visually-hidden"
-                            name="delivery-type"
-                            type="radio"
-                            value="Доставка до двери"
-                            checked
-                          />
-                          <span class="radio__emulator"></span>
-                          <span class="radio__label">Доставка до двери</span>
-                        </label>
-
-                        <label class="radios__item radio">
-                          <input
-                            class="radio__input visually-hidden"
-                            name="delivery-type"
-                            type="radio"
-                            value="Самовывоз"
-                          />
-                          <span class="radio__emulator"></span>
-                          <span class="radio__label">Самовывоз</span>
-                        </label>
-                      </fieldset>
+                <div
+                  class="calculator__item calculator__item-shipping shipping-info"
+                >
+                  <h3 class="shipping-info__title title-info">
+                    Информация о доставке
+                  </h3>
+                  <div class="shipping-info parameters">
+                    <div class="shipping-info__field field">
+                      <label for="city" class="field__city"
+                        >Город получения
+                      </label>
+                      <input
+                        type="text"
+                        class="field__input field"
+                        id="city"
+                        name="city"
+                        placeholder="Например: Санкт-Петербург"
+                      />
                     </div>
+                    <fieldset class="shipping-info__delivery-types radios">
+                      <legend class="radios__title visually-hidden">
+                        Вариант получения
+                      </legend>
+
+                      <label class="radios__item radio">
+                        <input
+                          class="radio__input visually-hidden"
+                          name="delivery-type"
+                          type="radio"
+                          value="Доставка до двери"
+                          checked
+                        />
+                        <span class="radio__emulator"></span>
+                        <span class="radio__label">Доставка до двери</span>
+                      </label>
+
+                      <label class="radios__item radio">
+                        <input
+                          class="radio__input visually-hidden"
+                          name="delivery-type"
+                          type="radio"
+                          value="Самовывоз"
+                        />
+                        <span class="radio__emulator"></span>
+                        <span class="radio__label">Самовывоз</span>
+                      </label>
+                    </fieldset>
                   </div>
                 </div>
               </div>
@@ -617,5 +619,7 @@
         </div>
       </section>
     </main>
+
+    <script src="./js/main.js"></script>
   </body>
 </html>

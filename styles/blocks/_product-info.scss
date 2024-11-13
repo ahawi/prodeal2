@@ -1,3 +1,13 @@
 .product-info {
-    max-width: 339px;
+  @include tablet {
+    max-width: 300px;
+  }
+
+  @include mobile {
+    min-width: 180px;
+  }
+
+  @include mobile-s {
+   min-width: 100%;
+  }
 }

@@ -22,6 +22,8 @@
     height: var(--input-height);
     border-radius: var(--fieldInputBorderRadius);
     padding-inline: var(--fieldInputPaddingInline);
+    // max-width: 339px;
+    
 
     &-small {
       @include flex-center;
@@ -30,6 +32,11 @@
       max-width: 100px;
       border-radius: var(--fieldInputBorderRadius);
       padding-inline: var(--fieldInputPaddingInline);
+
+      @include tablet {
+        max-width: 100%;
+      }
+
     }
 
     &-medium {
@@ -39,6 +46,14 @@
       max-width: 159px;
       border-radius: var(--fieldInputBorderRadius);
       padding-inline: var(--fieldInputPaddingInline);
+
+      @include desktop {
+        max-width: 150px;
+      }
+
+      @include tablet {
+        max-width: 100%;
+      }
     }
   }
 

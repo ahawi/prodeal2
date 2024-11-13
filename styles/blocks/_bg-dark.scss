@@ -7,8 +7,18 @@
     border-radius: var(--border-radius-large);
     max-width: 1440px;
 
-    @include mobile {
+    @include desktop {
       border-radius: 0 0 40px 40px;
+    }
+  }
+
+  &__container {
+    max-width: var(--container-width);
+    margin-inline: auto;
+    padding-inline: var(--container-padding-x);
+
+    @include desktop {
+      border-radius: 0;
     }
   }
 }
