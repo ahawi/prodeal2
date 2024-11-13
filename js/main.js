@@ -36,4 +36,53 @@ adjustLayout();
 // Добавляем обработчик события для изменения размера окна
 window.addEventListener("resize", adjustLayout);
 
+function hideLayout() {
+  const aboutBody = document.querySelector(".about__body");
+  const aboutDescription = document.querySelector(".about__description");
+  const aboutDescriptionInfo = document.querySelector(
+    ".about__description-info"
+  );
+  const aboutDescriptionBlockquote = document.querySelector(
+    ".about__description-blockquote"
+  );
+  const aboutProperties = document.querySelector(".about__properties");
 
+  // Проверяем ширину окна
+  if (window.innerWidth <= 1023) {
+    // Если элемент about__description существует и элементы не перемещены
+    if (aboutDescription) {
+      // Перемещаем дочерние элементы в about__body
+
+      aboutBody.appendChild(aboutDescriptionInfo);
+      aboutDescriptionInfo.style.order = "-1"; // Устанавливаем order для about__description-info
+
+      aboutBody.appendChild(aboutDescriptionBlockquote);
+      aboutDescriptionBlockquote.style.order = "1";
+
+      aboutProperties.style.order = "0";
+
+      aboutBody.removeChild(aboutDescription);
+    }
+  } else {
+    if (!aboutDescription) {
+      const aboutDescription = document.createElement("div");
+      aboutDescription.className = "about__description";
+      aboutDescription.appendChild(aboutDescriptionInfo);
+      aboutDescription.appendChild(aboutDescriptionBlockquote);
+
+      aboutBody.appendChild(aboutDescription);
+
+
+      aboutDescriptionInfo.style.order = "";
+      if (aboutProperties) {
+        aboutProperties.style.order = "";
+      }
+    }
+  }
+}
+
+// Проверяем ширину при загрузке страницы
+hideLayout();
+
+// Добавляем обработчик события для изменения размера окна
+window.addEventListener("resize", hideLayout);
