@@ -1,13 +1,37 @@
 .about {
-  &__main {
+  &__body {
     display: flex;
     align-items: center;
     column-gap: 113px;
+
+    @include desktop {
+      column-gap: 95px;
+    }
+
+    @include tablet {
+      flex-direction: column;
+      row-gap: 32px;
+    }
+
+    @include mobile {
+      padding-right: 10px;
+    }
   }
 
-  &__body {
-    width: 503px;
-    height: 297px;
+  &__list {
+    max-width: 503px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    @include tablet {
+      max-width: 100%;
+      justify-content: center;
+    }
+
+    @include mobile-s {
+      justify-content: start;
+    }
   }
 
   &__item {
@@ -15,10 +39,15 @@
     padding: 12px 16px;
     border-radius: 100px;
 
+    @include mobile {
+      padding: 12px;
+    }
+
     &-title {
-      font-size: 22px;
+      font-size: clamp(14px, 1.53vw, 22px);
       font-weight: 400;
       color: var(--color-gray-dark);
+      white-space: nowrap;
     }
   }
 
@@ -29,16 +58,31 @@
 
     &-info {
       line-height: 1.3;
-      width: 505px;
-      font-size: 28px;
+      max-width: 505px;
+      font-size: clamp(20px, 1.94vw, 28px);
       font-weight: 300;
+
+      @include tablet {
+        max-width: 100%;
+      }
+    }
+
+    &-image {
+      @include mobile {
+        width: 50px;
+        height: 50px;
+      }
     }
   }
 
   &__description-blockquote {
-    width: 521px;
+    max-width: 521px;
     display: flex;
     column-gap: 16px;
     line-height: 1.5;
+
+    @include tablet {
+      max-width: 100%;
+    }
   }
 }
