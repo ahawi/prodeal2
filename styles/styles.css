@@ -566,6 +566,11 @@ h4,
 .section {
   padding-bottom: var(--section-padding-y);
 }
+@media (max-width: 767px) {
+  .section {
+    padding-bottom: calc(var(--section-padding-y) / 2);
+  }
+}
 
 .bg-dark {
   background-color: var(--color-dark);
@@ -677,25 +682,61 @@ h4,
   }
 }
 
-.about__main {
+.about__body {
   display: flex;
   align-items: center;
   -moz-column-gap: 113px;
        column-gap: 113px;
 }
-.about__body {
-  width: 503px;
-  height: 297px;
+@media (max-width: 1280px) {
+  .about__body {
+    -moz-column-gap: 95px;
+         column-gap: 95px;
+  }
+}
+@media (max-width: 1023px) {
+  .about__body {
+    flex-direction: column;
+    row-gap: 32px;
+  }
+}
+@media (max-width: 767px) {
+  .about__body {
+    padding-right: 10px;
+  }
+}
+.about__list {
+  max-width: 503px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+@media (max-width: 1023px) {
+  .about__list {
+    max-width: 100%;
+    justify-content: center;
+  }
+}
+@media (max-width: 480px) {
+  .about__list {
+    justify-content: start;
+  }
 }
 .about__item {
   box-shadow: var(--shadow);
   padding: 12px 16px;
   border-radius: 100px;
 }
+@media (max-width: 767px) {
+  .about__item {
+    padding: 12px;
+  }
+}
 .about__item-title {
-  font-size: 22px;
+  font-size: clamp(14px, 1.53vw, 22px);
   font-weight: 400;
   color: var(--color-gray-dark);
+  white-space: nowrap;
 }
 .about__description {
   display: flex;
@@ -704,16 +745,32 @@ h4,
 }
 .about__description-info {
   line-height: 1.3;
-  width: 505px;
-  font-size: 28px;
+  max-width: 505px;
+  font-size: clamp(20px, 1.94vw, 28px);
   font-weight: 300;
 }
+@media (max-width: 1023px) {
+  .about__description-info {
+    max-width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .about__description-image {
+    width: 50px;
+    height: 50px;
+  }
+}
 .about__description-blockquote {
-  width: 521px;
+  max-width: 521px;
   display: flex;
   -moz-column-gap: 16px;
        column-gap: 16px;
   line-height: 1.5;
+}
+@media (max-width: 1023px) {
+  .about__description-blockquote {
+    max-width: 100%;
+  }
 }
 
 .grid {
@@ -779,9 +836,14 @@ h4,
 .title {
   padding-bottom: 40px;
 }
+@media (max-width: 767px) {
+  .title {
+    padding-bottom: 32px;
+  }
+}
 .title-info {
   padding-bottom: 16px;
-  border-bottom: 1px solid #EBEBEB;
+  border-bottom: 1px solid #ebebeb;
   font-size: clamp(16px, 1.39vw, 20px);
 }
 
