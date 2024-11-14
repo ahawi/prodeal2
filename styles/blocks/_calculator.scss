@@ -5,33 +5,29 @@
   padding: 60px;
   color: var(--color-light);
 
-  @include tablet {
-    padding-inline: 30px;
-  }
-
-  @include mobile {
-    padding-inline: 10px;
+  &__form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
   }
 
   &__body {
     display: flex;
     justify-content: space-between;
     column-gap: 32px;
-
-    @include tablet {
-      column-gap: 20px;
-    }
-
-    @include mobile-s {
-      flex-direction: column;
-      row-gap: 32px;
-      justify-content: center;
-      align-items: center;
-    }
   }
 
   &__item {
+    max-width: 340px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 17px;
     flex: 1;
+
+    &-title {
+      padding-bottom: 16px;
+      border-bottom: 1px solid #ebebeb;
+    }
   }
 
   &__button {

@@ -9,6 +9,7 @@
   background-color: var(--color-accent);
   border: none;
   border-radius: var(--border-radius-button);
+  cursor: pointer;
 
   @include hover {
     color: var(--color-dark);
@@ -21,6 +22,7 @@
 
     @include hover {
       background-color: var(--color-accent);
+      color: var(--color-light);
     }
 
     @include mobile {

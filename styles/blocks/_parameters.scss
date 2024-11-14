@@ -2,14 +2,13 @@
   display: flex;
   flex-direction: column;
   font-size: 14px;
-  padding-top: 10px;
+  row-gap: 16px;
+
 
   &__product-group {
     display: flex;
     justify-content: space-between;
-    row-gap: 10px;
-    column-gap: 17px;
-    padding-bottom: 10px;
+    column-gap: 16px;
 
     @include tablet {
       flex-direction: column;

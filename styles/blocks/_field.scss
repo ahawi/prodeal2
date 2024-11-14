@@ -1,63 +1,25 @@
 .field {
   --fieldInputBorderRadius: 6px;
-  --fieldInputPaddingInline: 11px;
+  --fieldInputBgColor: var(--color-light);
 
   display: flex;
   flex-direction: column;
   row-gap: 7px;
-  border: 2px solid transparent;
-
-  &::placeholder {
-    color: var(--color-gray);
-  }
-
-  &:focus {
-    border-color: var(--color-accent);
-    outline: none;
-  }
 
   &__input {
-    @include flex-center;
-
+    width: 100%;
     height: var(--input-height);
+    padding-inline: 11px;
+    border: 1px solid var(--fieldInputBorderColor);
     border-radius: var(--fieldInputBorderRadius);
-    padding-inline: var(--fieldInputPaddingInline);
-    // max-width: 339px;
-    
+    cursor: pointer;
 
-    &-small {
-      @include flex-center;
-
-      height: var(--input-height);
-      max-width: 100px;
-      border-radius: var(--fieldInputBorderRadius);
-      padding-inline: var(--fieldInputPaddingInline);
-
-      @include tablet {
-        max-width: 100%;
-      }
-
-    }
-
-    &-medium {
-      @include flex-center;
-
-      height: var(--input-height);
-      max-width: 159px;
-      border-radius: var(--fieldInputBorderRadius);
-      padding-inline: var(--fieldInputPaddingInline);
-
-      @include desktop {
-        max-width: 150px;
-      }
-
-      @include tablet {
-        max-width: 100%;
-      }
+    &:focus-visible {
+      border-color: var(--color-accent);
+      outline: none;
     }
   }
 
-  &__city,
   &__label {
     color: var(--color-gray);
   }
