@@ -566,9 +566,15 @@ h4,
 .section:not(:first-child) {
   padding-block: var(--section-padding-y);
 }
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   .section:not(:first-child) {
-    padding-bottom: calc(var(--section-padding-y) / 2);
+    padding-top: 0;
+    padding-bottom: 60px;
+  }
+}
+@media (max-width: 1023px) {
+  .section:first-child {
+    padding-bottom: 60px;
   }
 }
 
@@ -848,6 +854,12 @@ h4,
   padding-bottom: 16px;
   border-bottom: 1px solid #ebebeb;
   font-size: clamp(16px, 1.39vw, 20px);
+}
+
+@media (max-width: 1023px) {
+  .how-it-works__title {
+    padding-top: 32px;
+  }
 }
 
 .how-it-works-card {

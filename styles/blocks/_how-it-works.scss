@@ -1,0 +1,7 @@
+.how-it-works {
+  &__title {
+    @include tablet {
+      padding-top: 32px;
+    }
+  }
+}
