@@ -563,11 +563,11 @@ h4,
   }
 }
 
-.section {
-  padding-bottom: var(--section-padding-y);
+.section:not(:first-child) {
+  padding-block: var(--section-padding-y);
 }
 @media (max-width: 767px) {
-  .section {
+  .section:not(:first-child) {
     padding-bottom: calc(var(--section-padding-y) / 2);
   }
 }

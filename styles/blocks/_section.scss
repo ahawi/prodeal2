@@ -1,7 +1,9 @@
 .section {
-  padding-bottom: var(--section-padding-y);
+  &:not(:first-child) {
+    padding-block: var(--section-padding-y);
 
-  @include mobile {
-    padding-bottom: calc(var(--section-padding-y) / 2);
+    @include mobile {
+      padding-bottom: calc(var(--section-padding-y) / 2);
+    }
   }
 }
