@@ -421,9 +421,7 @@
             <form class="calculator__form">
               <div class="calculator__body">
                 <div class="calculator__item">
-                  <h4 class="calculator__item-title">
-                    Информация о товаре
-                  </h4>
+                  <h4 class="calculator__item-title">Информация о товаре</h4>
                   <fieldset class="parameters">
                     <legend class="visually-hidden">Данные о товаре</legend>
                     <div class="parameters__product-group">
@@ -923,7 +921,7 @@
         </div>
       </section>
 
-      <!-- <section class="section">
+      <section class="section">
         <div class="section__body bg-color__dark bg-color__container">
           <div class="consultation container">
             <div class="consultation__body">
@@ -937,10 +935,62 @@
                 </p>
               </div>
             </div>
-            <form class="consultation__form"></form>
+            <form class="consultation__form">
+              <fieldset class="consultation__form-body">
+                <legend class="visually-hidden">
+                  Оставить заявку для консультации
+                </legend>
+                <div class="consultation__field field">
+                  <label class="field__label visually-hidden" for="name"
+                    >Имя</label
+                  >
+                  <input
+                    class="field__input"
+                    id="name"
+                    name="name"
+                    placeholder="Имя"
+                  />
+                </div>
+
+                <div class="consultation__field field">
+                  <label class="field__label visually-hidden" for="email"
+                    >Email</label
+                  >
+                  <input
+                    class="field__input"
+                    id="email"
+                    name="email"
+                    placeholder="Email"
+                    type="email"
+                    required
+                  />
+                </div>
+
+                <div class="consultation__field field">
+                  <label class="field__label visually-hidden" for="phone"
+                    >Телефон</label
+                  >
+                  <input
+                    class="field__input"
+                    id="phone"
+                    name="phone"
+                    placeholder="Телефон"
+                  />
+                </div>
+                <button class="consultation__button button" type="submit">
+                  Оставить заявку
+                </button>
+                <div class="consultation__privacy">
+                  <p>
+                    Заполняя форму вы соглашаетесь на обработку персональных
+                    данных и получение информационных сообщений от PRODEAL
+                  </p>
+                </div>
+              </fieldset>
+            </form>
           </div>
         </div>
-      </section> -->
+      </section>
     </main>
 
     <script src="./js/main.js"></script>
