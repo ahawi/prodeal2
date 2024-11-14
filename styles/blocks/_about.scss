@@ -1,4 +1,7 @@
 .about {
+display: flex;
+flex-direction: column;
+row-gap: 32px;
   &__body {
     display: flex;
     align-items: center;

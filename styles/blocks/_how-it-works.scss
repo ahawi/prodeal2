@@ -1,4 +1,8 @@
 .how-it-works {
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+  
   &__title {
     @include tablet {
       padding-top: 32px;
