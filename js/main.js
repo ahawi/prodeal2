@@ -1,6 +1,6 @@
-function adjustLayout() {
+function wrapLastTwoItems() {
   const calculatorBody = document.querySelector(".calculator__body");
-  const items = document.querySelectorAll(".calculator__item-shipping");
+  const items = document.querySelectorAll(".calculator__item");
   const existingWrapper = document.querySelector(".calculator__wrapper");
 
   if (window.innerWidth >= 480 && window.innerWidth < 825) {
@@ -11,11 +11,11 @@ function adjustLayout() {
       wrapper.style.flexDirection = "column";
       wrapper.style.justifyContent = "space-between";
       wrapper.style.rowGap = "15px";
+      wrapper.style.flex = "1";
 
       // Перемещаем элементы внутрь новой обертки
-      items.forEach((item) => {
-        wrapper.appendChild(item);
-      });
+      wrapper.appendChild(items[1]); // Второй элемент
+      wrapper.appendChild(items[2]); // Третий элемент
 
       calculatorBody.appendChild(wrapper);
     }
@@ -31,10 +31,10 @@ function adjustLayout() {
 }
 
 // Проверяем ширину при загрузке страницы
-adjustLayout();
+wrapLastTwoItems();
 
 // Добавляем обработчик события для изменения размера окна
-window.addEventListener("resize", adjustLayout);
+window.addEventListener("resize", wrapLastTwoItems);
 
 function hideLayout() {
   const aboutBody = document.querySelector(".about__body");
@@ -71,7 +71,6 @@ function hideLayout() {
       aboutDescription.appendChild(aboutDescriptionBlockquote);
 
       aboutBody.appendChild(aboutDescription);
-
 
       aboutDescriptionInfo.style.order = "";
       if (aboutProperties) {

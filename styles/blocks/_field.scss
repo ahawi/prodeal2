@@ -6,6 +6,10 @@
   flex-direction: column;
   row-gap: 7px;
 
+  @include tablet {
+    padding-bottom: 10px;
+  }
+
   &__input {
     width: 100%;
     height: var(--input-height);
@@ -22,5 +26,6 @@
 
   &__label {
     color: var(--color-gray);
+    white-space: nowrap;
   }
 }

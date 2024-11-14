@@ -42,6 +42,10 @@
     row-gap: 16px;
     flex: 1;
 
+    @include mobile-s {
+      width: 100%;
+    }
+
     &-title {
       padding-bottom: 16px;
       border-bottom: 1px solid #ebebeb;

@@ -1,8 +1,11 @@
 .parameters {
   display: flex;
   flex-direction: column;
-  font-size: 14px;
   row-gap: 16px;
+
+  @include tablet {
+    row-gap: 0;
+  }
 
 
   &__product-group {
