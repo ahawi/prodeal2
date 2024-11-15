@@ -430,12 +430,13 @@
                           >Длина, 0 см</label
                         >
                         <input
-                          class="field__input"
+                          class="field__input restricted-input"
                           id="length"
                           name="length"
                           placeholder="0 см"
                           type="number"
                           inputmode="numeric"
+                          required
                         />
                       </div>
 
@@ -444,11 +445,12 @@
                           >Ширина, 0 см</label
                         >
                         <input
-                          class="field__input"
+                          class="field__input restricted-input"
                           id="width"
                           name="width"
                           placeholder="0 см"
                           type="number"
+                          required
                         />
                       </div>
 
@@ -457,47 +459,42 @@
                           >Высота, 0 см</label
                         >
                         <input
-                          class="field__input"
+                          class="field__input restricted-input"
                           id="height"
                           name="height"
                           placeholder="0 см"
                           type="number"
+                          required
                         />
                       </div>
                     </div>
 
                     <div class="parameters__product-group">
-                      <fieldset class="field">
-                        <legend class="visually-hidden">
-                          Вес в киллограммах
-                        </legend>
+                      <div class="field">
                         <label class="field__label" for="weight"
                           >Вес, 0 кг</label
                         >
                         <input
-                          class="field__input"
+                          class="field__input restricted-input"
                           id="weight"
                           name="weight"
                           placeholder="0 кг"
                           type="number"
                         />
-                      </fieldset>
+                      </div>
 
-                      <fieldset class="field">
-                        <legend class="visually-hidden">
-                          Оценочная стоимость в рублях
-                        </legend>
+                      <div class="field">
                         <label class="field__label" for="price"
                           >Оценочная стоимость</label
                         >
                         <input
-                          class="field__input"
+                          class="field__input restricted-input"
                           id="price"
                           name="price"
                           placeholder="руб"
                           type="number"
                         />
-                      </fieldset>
+                      </div>
                     </div>
                   </fieldset>
                 </div>
@@ -518,6 +515,7 @@
                         id="sending-city"
                         name="sending-city"
                         placeholder="Например: Москва"
+                        required
                       />
                     </div>
                     <fieldset class="radios">
@@ -567,6 +565,7 @@
                         id="delivery-city"
                         name="delivery-city"
                         placeholder="Например: Санкт-Петербург"
+                        required
                       />
                     </div>
                     <fieldset class="radios">
@@ -926,14 +925,13 @@
           <div class="consultation container">
             <div class="consultation__body">
               <h2 class="consultation__title">
-                Есть вопросы? Оставьте заявку на консультацию
+                Есть вопросы? <br />
+                Оставьте заявку на консультацию
               </h2>
-              <div class="consultation__description">
-                <p>
-                  Оставьте заявку и наш консультант ответит на любые вопросы,
-                  расскажет про все возможности сервиса
-                </p>
-              </div>
+              <p class="consultation__description">
+                Оставьте заявку и наш консультант ответит на любые вопросы,
+                расскажет про все возможности сервиса
+              </p>
             </div>
             <form class="consultation__form">
               <fieldset class="consultation__form-body">
@@ -945,7 +943,7 @@
                     >Имя</label
                   >
                   <input
-                    class="field__input"
+                    class="field__input field__input-large"
                     id="name"
                     name="name"
                     placeholder="Имя"
@@ -957,7 +955,7 @@
                     >Email</label
                   >
                   <input
-                    class="field__input"
+                    class="field__input field__input-large"
                     id="email"
                     name="email"
                     placeholder="Email"
@@ -971,13 +969,17 @@
                     >Телефон</label
                   >
                   <input
-                    class="field__input"
+                    class="field__input field__input-large"
                     id="phone"
                     name="phone"
                     placeholder="Телефон"
+                    type="number"
                   />
                 </div>
-                <button class="consultation__button button" type="submit">
+                <button
+                  class="consultation__button button button--consultation"
+                  type="submit"
+                >
                   Оставить заявку
                 </button>
                 <div class="consultation__privacy">

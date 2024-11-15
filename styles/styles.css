@@ -462,7 +462,7 @@ h4,
   height: var(--button-height);
   padding: 12px 40px;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 400;
   color: var(--color-light);
   background-color: var(--color-accent);
   border: none;
@@ -484,6 +484,7 @@ h4,
 .button--accent {
   color: var(--color-light);
   background-color: var(--color-dark);
+  font-weight: 500;
 }
 @media (hover: hover) {
   .button--accent:hover {
@@ -500,6 +501,22 @@ h4,
 @media (max-width: 767px) {
   .button--accent {
     font-size: 16px;
+  }
+}
+.button--consultation {
+  color: var(--color-light);
+  background-color: var(--color-accent);
+}
+@media (hover: hover) {
+  .button--consultation:hover {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+  }
+}
+@media (hover: none) {
+  .button--consultation:active {
+    background-color: var(--color-dark);
+    color: var(--color-light);
   }
 }
 
@@ -952,7 +969,7 @@ h4,
 
 .field {
   --fieldInputBorderRadius: 6px;
-  --fieldInputBgColor: var(--color-light);
+  --fieldInputBgColor: #00103d1f;
   display: flex;
   flex-direction: column;
   row-gap: 7px;
@@ -966,9 +983,38 @@ h4,
   width: 100%;
   height: var(--input-height);
   padding-inline: 11px;
-  border: 1px solid var(--fieldInputBorderColor);
+  border: 1px solid var(--fieldInputBgColor);
   border-radius: var(--fieldInputBorderRadius);
   cursor: pointer;
+}
+.field__input-large {
+  height: var(--input-height-large);
+}
+@media (hover: hover) {
+  .field__input:hover {
+    background-color: var(--color-accent);
+  }
+  .field__input:hover::-moz-placeholder {
+    color: var(--color-light);
+    transition-duration: var(--transition-duration);
+  }
+  .field__input:hover::placeholder {
+    color: var(--color-light);
+    transition-duration: var(--transition-duration);
+  }
+}
+@media (hover: none) {
+  .field__input:active {
+    background-color: var(--color-accent);
+  }
+  .field__input:active::-moz-placeholder {
+    color: var(--color-light);
+    transition-duration: var(--transition-duration);
+  }
+  .field__input:active::placeholder {
+    color: var(--color-light);
+    transition-duration: var(--transition-duration);
+  }
 }
 .field__input:focus-visible {
   border-color: var(--color-accent);
@@ -1106,4 +1152,71 @@ h4,
 }
 .review-card svg {
   color: #FFD400;
+}
+
+.consultation {
+  padding-block: 100px;
+  padding-inline: 60px 110px;
+  display: flex;
+  justify-content: space-between;
+  -moz-column-gap: 95px;
+       column-gap: 95px;
+}
+@media (max-width: 1023px) {
+  .consultation {
+    padding: 60px 30px;
+    flex-direction: column;
+    row-gap: 24px;
+  }
+}
+@media (max-width: 767px) {
+  .consultation {
+    padding-inline: 10px;
+  }
+}
+.consultation__title {
+  max-width: 464px;
+}
+@media (max-width: 1023px) {
+  .consultation__title {
+    max-width: 100%;
+  }
+}
+.consultation__body {
+  color: var(--color-light);
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+}
+.consultation__description {
+  width: 65%;
+  font-weight: 300;
+  line-height: 1.4;
+}
+@media (max-width: 1023px) {
+  .consultation__description {
+    width: 100%;
+  }
+}
+.consultation__form-body {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+  background-color: var(--color-light);
+  border-radius: var(--border-radius);
+  padding: 32px;
+}
+@media (max-width: 1023px) {
+  .consultation__form-body {
+    row-gap: 14px;
+  }
+}
+.consultation__privacy {
+  font-size: 12px;
+  color: var(--color-gray);
+}
+@media (max-width: 1023px) {
+  .consultation__privacy {
+    padding-block: 10px;
+  }
 }/*# sourceMappingURL=styles.css.map */
