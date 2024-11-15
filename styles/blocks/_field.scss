@@ -1,6 +1,6 @@
 .field {
   --fieldInputBorderRadius: 6px;
-  --fieldInputBgColor: var(--color-light);
+  --fieldInputBgColor: #00103d1f;
 
   display: flex;
   flex-direction: column;
@@ -14,9 +14,22 @@
     width: 100%;
     height: var(--input-height);
     padding-inline: 11px;
-    border: 1px solid var(--fieldInputBorderColor);
+    border: 1px solid var(--fieldInputBgColor);
     border-radius: var(--fieldInputBorderRadius);
     cursor: pointer;
+
+    &-large {
+      height: var(--input-height-large);
+    }
+
+    @include hover {
+      background-color: var(--color-accent);
+
+      &::placeholder {
+        color: var(--color-light);
+        transition-duration: var(--transition-duration);
+      }
+    }
 
     &:focus-visible {
       border-color: var(--color-accent);
