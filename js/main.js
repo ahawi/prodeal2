@@ -85,3 +85,16 @@ hideLayout();
 
 // Добавляем обработчик события для изменения размера окна
 window.addEventListener("resize", hideLayout);
+
+
+// Получаем все поля с классом restricted-input
+const restrictedInputs = document.querySelectorAll('.restricted-input');
+
+restrictedInputs.forEach(input => {
+    input.addEventListener('keypress', function(event) {
+        // Запрещаем ввод + и -
+        if (event.key === '+' || event.key === '-') {
+            event.preventDefault();
+        }
+    });
+});
