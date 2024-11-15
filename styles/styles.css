@@ -607,7 +607,7 @@ h4,
     padding-bottom: 60px;
   }
 }
-.section:nth-child(5) {
+.section:nth-child(5), .section:nth-child(6) {
   padding-top: 0px;
 }
 
