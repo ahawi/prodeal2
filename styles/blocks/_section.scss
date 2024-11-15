@@ -14,7 +14,11 @@
     }
   }
 
-  &:nth-child(5),  &:nth-child(6) {
+  &:nth-child(5) {
     padding-top: 0px;
+  }
+
+  &:nth-child(6) {
+    padding-block: 0px;
   }
 }
