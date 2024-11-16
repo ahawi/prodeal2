@@ -662,7 +662,7 @@ h4,
   aspect-ratio: 1;
   top: 8%;
   left: 90%;
-  background-image: url("/images/arrow-right.svg");
+  background-image: url("../../images/check-mark.svg");
 }
 @media (max-width: 1280px) {
   .info-card__link-title::after {
@@ -692,7 +692,6 @@ h4,
   top: 0;
   left: 0;
   background-image: url("/images/check-mark.svg");
-  color: var(--color-accent);
 }
 
 .info-cards__list {
