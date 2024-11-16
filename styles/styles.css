@@ -662,7 +662,7 @@ h4,
   aspect-ratio: 1;
   top: 8%;
   left: 90%;
-  background-image: url("../../images/arrow-right.svg");
+  background-image: url("prodeal/images/arrow-right.svg");
 }
 @media (max-width: 1280px) {
   .info-card__link-title::after {
@@ -691,7 +691,7 @@ h4,
   aspect-ratio: 1;
   top: 0;
   left: 0;
-  background-image: url("../../images/check-mark.svg");
+  background-image: url("prodeal/images/check-mark.svg");
 }
 
 .info-cards__list {
