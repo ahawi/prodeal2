@@ -1,3 +1,15 @@
+function restrictedInput() {
+  const restrictedInputs = document.querySelectorAll(".restricted-input");
+
+  restrictedInputs.forEach((input) => {
+    input.addEventListener("keypress", function (event) {
+      if (event.key === "+" || event.key === "-") {
+        event.preventDefault();
+      }
+    });
+  });
+}
+
 function wrapLastTwoItems() {
   const calculatorBody = document.querySelector(".calculator__body");
   const items = document.querySelectorAll(".calculator__item");
@@ -13,15 +25,13 @@ function wrapLastTwoItems() {
       wrapper.style.rowGap = "15px";
       wrapper.style.flex = "1";
 
-      // Перемещаем элементы внутрь новой обертки
-      wrapper.appendChild(items[1]); // Второй элемент
-      wrapper.appendChild(items[2]); // Третий элемент
+      wrapper.appendChild(items[1]);
+      wrapper.appendChild(items[2]);
 
       calculatorBody.appendChild(wrapper);
     }
   } else {
     if (existingWrapper) {
-      // Перемещаем все элементы обратно в основной контейнер
       while (existingWrapper.firstChild) {
         calculatorBody.appendChild(existingWrapper.firstChild);
       }
@@ -29,12 +39,6 @@ function wrapLastTwoItems() {
     }
   }
 }
-
-// Проверяем ширину при загрузке страницы
-wrapLastTwoItems();
-
-// Добавляем обработчик события для изменения размера окна
-window.addEventListener("resize", wrapLastTwoItems);
 
 function hideLayout() {
   const aboutBody = document.querySelector(".about__body");
@@ -47,14 +51,10 @@ function hideLayout() {
   );
   const aboutProperties = document.querySelector(".about__properties");
 
-  // Проверяем ширину окна
   if (window.innerWidth <= 1023) {
-    // Если элемент about__description существует и элементы не перемещены
     if (aboutDescription) {
-      // Перемещаем дочерние элементы в about__body
-
       aboutBody.appendChild(aboutDescriptionInfo);
-      aboutDescriptionInfo.style.order = "-1"; // Устанавливаем order для about__description-info
+      aboutDescriptionInfo.style.order = "-1";
 
       aboutBody.appendChild(aboutDescriptionBlockquote);
       aboutDescriptionBlockquote.style.order = "1";
@@ -80,21 +80,9 @@ function hideLayout() {
   }
 }
 
-// Проверяем ширину при загрузке страницы
+restrictedInput();
 hideLayout();
+wrapLastTwoItems();
 
-// Добавляем обработчик события для изменения размера окна
 window.addEventListener("resize", hideLayout);
-
-
-// Получаем все поля с классом restricted-input
-const restrictedInputs = document.querySelectorAll('.restricted-input');
-
-restrictedInputs.forEach(input => {
-    input.addEventListener('keypress', function(event) {
-        // Запрещаем ввод + и -
-        if (event.key === '+' || event.key === '-') {
-            event.preventDefault();
-        }
-    });
-});
+window.addEventListener("resize", wrapLastTwoItems);
