@@ -692,6 +692,7 @@ h4,
   top: 0;
   left: 0;
   background-image: url("../../images/check-mark.svg");
+  color: var(--color-accent);
 }
 
 .info-cards__list {
