@@ -10,8 +10,8 @@
     padding-bottom: 24px;
 
     &::after {
-      position: absolute;
       content: "";
+      position: absolute;
       width: 32px;
       aspect-ratio: 1;
       top: 8%;
@@ -39,8 +39,8 @@
     line-height: 1.4;
 
     &::before {
-      position: absolute;
       content: "";
+      position: absolute;
       width: 24px;
       aspect-ratio: 1;
       top: 0;
