@@ -1221,6 +1221,11 @@ h4,
   font-size: 12px;
   color: var(--color-gray);
 }
+@media (max-width: 767px) {
+  .consultation__privacy {
+    text-align: center;
+  }
+}
 @media (max-width: 1023px) {
   .consultation__privacy {
     padding-block: 10px;
