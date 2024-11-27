@@ -10,36 +10,6 @@ function restrictedInput() {
   });
 }
 
-function wrapLastTwoItems() {
-  const calculatorBody = document.querySelector(".calculator__body");
-  const items = document.querySelectorAll(".calculator__item");
-  const existingWrapper = document.querySelector(".calculator__wrapper");
-
-  if (window.innerWidth >= 480 && window.innerWidth < 825) {
-    if (!existingWrapper) {
-      const wrapper = document.createElement("div");
-      wrapper.className = "calculator__wrapper";
-      wrapper.style.display = "flex";
-      wrapper.style.flexDirection = "column";
-      wrapper.style.justifyContent = "space-between";
-      wrapper.style.rowGap = "15px";
-      wrapper.style.flex = "1";
-
-      wrapper.appendChild(items[1]);
-      wrapper.appendChild(items[2]);
-
-      calculatorBody.appendChild(wrapper);
-    }
-  } else {
-    if (existingWrapper) {
-      while (existingWrapper.firstChild) {
-        calculatorBody.appendChild(existingWrapper.firstChild);
-      }
-      calculatorBody.removeChild(existingWrapper);
-    }
-  }
-}
-
 function hideLayout() {
   const aboutBody = document.querySelector(".about__body");
   const aboutDescription = document.querySelector(".about__description");
