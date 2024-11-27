@@ -267,6 +267,18 @@ svg * {
   }
 }
 
+@media (min-width: 1024px) {
+  .visible-tablet {
+    display: none !important;
+  }
+}
+
+@media (max-width: 1023px) {
+  .hidden-tablet {
+    display: none !important;
+  }
+}
+
 body {
   font-family: var(--font-family-base);
   font-weight: 400;
@@ -972,6 +984,20 @@ h4,
     align-self: center;
     width: 100%;
   }
+}
+.calculator__group {
+  display: flex;
+}
+.calculator__group.hidden-tablet {
+  flex-direction: row;
+  -moz-column-gap: 32px;
+       column-gap: 32px;
+}
+.calculator__group.visible-tablet {
+  flex-direction: column;
+  row-gap: 32px;
+  width: 100%;
+  flex: 1;
 }
 
 .field {
