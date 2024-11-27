@@ -1272,6 +1272,20 @@ h4,
   background-color: var(--color-gray);
   border-radius: 8px;
 }
+@media (hover: hover) {
+  .soc1als__item:hover {
+    color: var(--color-gray);
+    background-color: var(--color-light);
+    transition-duration: var(--transition-duration);
+  }
+}
+@media (hover: none) {
+  .soc1als__item:active {
+    color: var(--color-gray);
+    background-color: var(--color-light);
+    transition-duration: var(--transition-duration);
+  }
+}
 .soc1als__link {
   display: flex;
   align-items: center;
@@ -1329,5 +1343,21 @@ h4,
 @media (max-width: 767px) {
   .footer__soc1als {
     align-self: start;
+  }
+}
+@media (hover: hover) {
+  .footer__link:hover {
+    opacity: 0.8;
+  }
+  .footer__link:hover::after {
+    width: 100%;
+  }
+}
+@media (hover: none) {
+  .footer__link:active {
+    opacity: 0.8;
+  }
+  .footer__link:active::after {
+    width: 100%;
   }
 }/*# sourceMappingURL=styles.css.map */

@@ -52,13 +52,7 @@
       align-items: center;
       height: 30px;
 
-      @include hover {
-        opacity: 0.8;
-
-        &::after {
-          width: 100%;
-        }
-      }
+      @include link;
 
       &::after {
         content: "";
