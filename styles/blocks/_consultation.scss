@@ -57,10 +57,10 @@
   &__privacy {
     font-size: 12px;
     color: var(--color-gray);
-    padding-top: 10px;
+    text-align: center;
 
-    @include mobile {
-      text-align: center;
+    @include tablet {
+      padding-top: 10px;
     }
   }
 }
