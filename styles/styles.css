@@ -703,7 +703,7 @@ h4,
   aspect-ratio: 1;
   top: 0;
   left: 0;
-  background-image: url("prodeal/images/check-mark.svg");
+  background-image: url("../images/check-mark.svg");
 }
 
 .info-cards__list {
