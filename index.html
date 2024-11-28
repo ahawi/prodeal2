@@ -429,12 +429,14 @@
                           >Длина, см</label
                         >
                         <input
+                          data-js-parameters
                           class="field__input restricted-input"
                           id="length"
                           name="length"
                           placeholder="0 см"
                           type="number"
                           required
+                          pattern="[0-9.,]*"
                         />
                       </div>
 
@@ -443,6 +445,7 @@
                           >Ширина, см</label
                         >
                         <input
+                          data-js-parameters
                           class="field__input restricted-input"
                           id="width"
                           name="width"
@@ -457,6 +460,7 @@
                           >Высота, см</label
                         >
                         <input
+                          data-js-parameters
                           class="field__input restricted-input"
                           id="height"
                           name="height"
@@ -471,6 +475,7 @@
                       <div class="field">
                         <label class="field__label" for="weight">Вес, кг</label>
                         <input
+                          data-js-parameters
                           class="field__input restricted-input"
                           id="weight"
                           name="weight"
@@ -485,6 +490,7 @@
                           >Оценочная стоимость</label
                         >
                         <input
+                          data-js-parameters
                           class="field__input restricted-input"
                           id="price"
                           name="price"

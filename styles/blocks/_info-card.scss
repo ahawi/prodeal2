@@ -16,7 +16,7 @@
       aspect-ratio: 1;
       top: 8%;
       left: 90%;
-      background-image: url("../../images/arrow-right.svg");
+      background-image: url("/prodeal/images/arrow-right.svg");
 
       @include desktop {
         width: 24px;
@@ -45,7 +45,7 @@
       aspect-ratio: 1;
       top: 0;
       left: 0;
-      background-image: url("../../images/check-mark.svg");
+      background-image: url("/prodeal/images/check-mark.svg");
     }
   }
 }
