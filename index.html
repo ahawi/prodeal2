@@ -426,7 +426,7 @@
                     <div class="parameters__product-group">
                       <div class="field">
                         <label class="field__label" for="length"
-                          >Длина, 0 см</label
+                          >Длина, см</label
                         >
                         <input
                           class="field__input restricted-input"
@@ -440,7 +440,7 @@
 
                       <div class="field">
                         <label class="field__label" for="width"
-                          >Ширина, 0 см</label
+                          >Ширина, см</label
                         >
                         <input
                           class="field__input restricted-input"
@@ -454,7 +454,7 @@
 
                       <div class="field">
                         <label class="field__label" for="height"
-                          >Высота, 0 см</label
+                          >Высота, см</label
                         >
                         <input
                           class="field__input restricted-input"
@@ -469,9 +469,7 @@
 
                     <div class="parameters__product-group">
                       <div class="field">
-                        <label class="field__label" for="weight"
-                          >Вес, 0 кг</label
-                        >
+                        <label class="field__label" for="weight">Вес, кг</label>
                         <input
                           class="field__input restricted-input"
                           id="weight"
@@ -506,14 +504,35 @@
                         <label for="sending-city" class="field__label">
                           Город отправки
                         </label>
-                        <input
-                          type="text"
-                          class="field__input"
-                          id="sending-city"
+                        <select
+                          class="field__select"
                           name="sending-city"
-                          placeholder="Например: Москва"
+                          id="sending-city"
                           required
-                        />
+                        >
+                          <option
+                            value="Например: Москва"
+                            disabled
+                            selected
+                            hidden
+                          >
+                            Например: Москва
+                          </option>
+                          <option value="Москва">Москва</option>
+                          <option value="Санкт-Петербург">
+                            Санкт-Петербург
+                          </option>
+                          <option value="Новосибирск">Новосибирск</option>
+                          <option value="Екатеринбург">Екатеринбург</option>
+                          <option value="Казань">Казань</option>
+                          <option value="Нижний Новгород">
+                            Нижний Новгород
+                          </option>
+                          <option value="Красноярск">Красноярск</option>
+                          <option value="Челябинск">Челябинск</option>
+                          <option value="Самара">Самара</option>
+                          <option value="Уфа">Уфа</option>
+                        </select>
                       </div>
                       <fieldset class="radios">
                         <legend class="radios__title visually-hidden">
@@ -557,14 +576,35 @@
                         <label for="delivery-city" class="field__label">
                           Город получения
                         </label>
-                        <input
-                          type="text"
-                          class="field__input"
-                          id="delivery-city"
+                        <select
+                          class="field__select"
                           name="delivery-city"
-                          placeholder="Например: Санкт-Петербург"
+                          id="delivery-city"
                           required
-                        />
+                        >
+                          <option
+                            value="Например: Санкт-Петербург"
+                            disabled
+                            selected
+                            hidden
+                          >
+                            Например: Санкт-Петербург
+                          </option>
+                          <option value="Москва">Москва</option>
+                          <option value="Санкт-Петербург">
+                            Санкт-Петербург
+                          </option>
+                          <option value="Новосибирск">Новосибирск</option>
+                          <option value="Екатеринбург">Екатеринбург</option>
+                          <option value="Казань">Казань</option>
+                          <option value="Нижний Новгород">
+                            Нижний Новгород
+                          </option>
+                          <option value="Красноярск">Красноярск</option>
+                          <option value="Челябинск">Челябинск</option>
+                          <option value="Самара">Самара</option>
+                          <option value="Уфа">Уфа</option>
+                        </select>
                       </div>
                       <fieldset class="radios">
                         <legend class="radios__title visually-hidden">
@@ -608,14 +648,35 @@
                         <label for="sending-city" class="field__label">
                           Город отправки
                         </label>
-                        <input
-                          type="text"
-                          class="field__input"
-                          id="sending-city"
+                        <select
+                          class="field__select"
                           name="sending-city"
-                          placeholder="Например: Москва"
+                          id="sending-city"
                           required
-                        />
+                        >
+                          <option
+                            value="Например: Москва"
+                            disabled
+                            selected
+                            hidden
+                          >
+                            Например: Москва
+                          </option>
+                          <option value="Москва">Москва</option>
+                          <option value="Санкт-Петербург">
+                            Санкт-Петербург
+                          </option>
+                          <option value="Новосибирск">Новосибирск</option>
+                          <option value="Екатеринбург">Екатеринбург</option>
+                          <option value="Казань">Казань</option>
+                          <option value="Нижний Новгород">
+                            Нижний Новгород
+                          </option>
+                          <option value="Красноярск">Красноярск</option>
+                          <option value="Челябинск">Челябинск</option>
+                          <option value="Самара">Самара</option>
+                          <option value="Уфа">Уфа</option>
+                        </select>
                       </div>
                       <fieldset class="radios">
                         <legend class="radios__title visually-hidden">
@@ -659,14 +720,35 @@
                         <label for="delivery-city" class="field__label">
                           Город получения
                         </label>
-                        <input
-                          type="text"
-                          class="field__input"
-                          id="delivery-city"
+                        <select
+                          class="field__select"
                           name="delivery-city"
-                          placeholder="Например: Санкт-Петербург"
+                          id="delivery-city"
                           required
-                        />
+                        >
+                          <option
+                            value="Например: Санкт-Петербург"
+                            disabled
+                            selected
+                            hidden
+                          >
+                            Например: Санкт-Петербург
+                          </option>
+                          <option value="Москва">Москва</option>
+                          <option value="Санкт-Петербург">
+                            Санкт-Петербург
+                          </option>
+                          <option value="Новосибирск">Новосибирск</option>
+                          <option value="Екатеринбург">Екатеринбург</option>
+                          <option value="Казань">Казань</option>
+                          <option value="Нижний Новгород">
+                            Нижний Новгород
+                          </option>
+                          <option value="Красноярск">Красноярск</option>
+                          <option value="Челябинск">Челябинск</option>
+                          <option value="Самара">Самара</option>
+                          <option value="Уфа">Уфа</option>
+                        </select>
                       </div>
                       <fieldset class="radios">
                         <legend class="radios__title visually-hidden">
