@@ -41,4 +41,38 @@
     color: var(--color-gray);
     white-space: nowrap;
   }
+
+  &__select {
+    font-family: var(--font-family-base);
+    height: var(--input-height);
+    cursor: pointer;
+    padding-inline: 11px;
+    border: 1px solid transparent;
+    border-radius: var(--fieldInputBorderRadius);
+    width: 100%;
+
+    appearance: none;
+    background-image: url("/images/arrow-down.svg");
+    background-position: right 10px center;
+    background-repeat: no-repeat;
+    background-size: 14px 7px;
+
+    font-size: 16px;
+
+    color: var(--color-dark);
+
+    &:invalid {
+      color: var(--color-gray);
+    }
+
+    &:focus {
+      outline: none;
+      border-color: var(--color-accent);
+    }
+
+    @include hover {
+      border-color: var(--color-accent);
+      transition-duration: var(--transition-duration);
+    }
+  }
 }

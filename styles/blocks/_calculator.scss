@@ -32,7 +32,7 @@
       flex-direction: column;
       row-gap: 32px;
       justify-content: center;
-      align-items: center;
+      // align-items: center;
     }
   }
 
@@ -41,9 +41,10 @@
     flex-direction: column;
     row-gap: 16px;
     flex: 1;
+    max-width: 339px;
 
-    @include mobile-s {
-      width: 100%;
+    @include tablet {
+      max-width: 100%;
     }
 
     &-title {
@@ -67,13 +68,20 @@
     &.hidden-tablet {
       flex-direction: row;
       column-gap: 32px;
+      justify-content: space-between;
+      flex: 2;
     }
 
     &.visible-tablet {
       flex-direction: column;
-      row-gap: 32px;
+      justify-content: space-between;
+      row-gap: 25px;
       width: 100%;
       flex: 1;
+
+      @include mobile-s {
+        row-gap: 32px;
+      }
     }
   }
 }

@@ -214,7 +214,7 @@ svg * {
   --container-width: 1200px;
   --container-padding-x: 20px;
   --section-padding-y: 120px;
-  --input-height: 38px;
+  --input-height: 40px;
   --input-height-large: 46px;
   --button-height: 56px;
   --transition-duration: 0.2s;
@@ -703,7 +703,7 @@ h4,
   aspect-ratio: 1;
   top: 0;
   left: 0;
-  background-image: url("/prodeal/images/check-mark.svg");
+  background-image: url("/images/check-mark.svg");
 }
 
 .info-cards__list {
@@ -958,7 +958,6 @@ h4,
     flex-direction: column;
     row-gap: 32px;
     justify-content: center;
-    align-items: center;
   }
 }
 .calculator__item {
@@ -966,10 +965,11 @@ h4,
   flex-direction: column;
   row-gap: 16px;
   flex: 1;
+  max-width: 339px;
 }
-@media (max-width: 480px) {
+@media (max-width: 1023px) {
   .calculator__item {
-    width: 100%;
+    max-width: 100%;
   }
 }
 .calculator__item-title {
@@ -992,12 +992,20 @@ h4,
   flex-direction: row;
   -moz-column-gap: 32px;
        column-gap: 32px;
+  justify-content: space-between;
+  flex: 2;
 }
 .calculator__group.visible-tablet {
   flex-direction: column;
-  row-gap: 32px;
+  justify-content: space-between;
+  row-gap: 25px;
   width: 100%;
   flex: 1;
+}
+@media (max-width: 480px) {
+  .calculator__group.visible-tablet {
+    row-gap: 32px;
+  }
 }
 
 .field {
@@ -1056,6 +1064,43 @@ h4,
 .field__label {
   color: var(--color-gray);
   white-space: nowrap;
+}
+.field__select {
+  font-family: var(--font-family-base);
+  height: var(--input-height);
+  cursor: pointer;
+  padding-inline: 11px;
+  border: 1px solid transparent;
+  border-radius: var(--fieldInputBorderRadius);
+  width: 100%;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-image: url("/images/arrow-down.svg");
+  background-position: right 10px center;
+  background-repeat: no-repeat;
+  background-size: 14px 7px;
+  font-size: 16px;
+  color: var(--color-dark);
+}
+.field__select:invalid {
+  color: var(--color-gray);
+}
+.field__select:focus {
+  outline: none;
+  border-color: var(--color-accent);
+}
+@media (hover: hover) {
+  .field__select:hover {
+    border-color: var(--color-accent);
+    transition-duration: var(--transition-duration);
+  }
+}
+@media (hover: none) {
+  .field__select:active {
+    border-color: var(--color-accent);
+    transition-duration: var(--transition-duration);
+  }
 }
 
 .radios {
