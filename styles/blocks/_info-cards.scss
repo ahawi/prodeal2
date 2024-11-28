@@ -1,5 +1,4 @@
 .info-cards {
-
   &__list {
     margin-top: -76px;
     display: flex;
@@ -26,10 +25,17 @@
     max-width: 100%;
     box-shadow: var(--shadow);
     padding: 32px 28px;
-    
+
+    &:nth-child(3) .info-card__link-title::after {
+      content: none;
+    }
 
     @include tablet {
       margin-bottom: 0;
     }
+  }
+
+  .item__cards-item:nth-of-type(3) .info__card-link-title::after {
+    content: none; /* Убираем контент псевдоэлемента */
   }
 }

@@ -12,7 +12,7 @@
     column-gap: 79px;
 
     @include desktop {
-      column-gap: 40px;
+      column-gap: 30px;
     }
 
     @include tablet {
@@ -74,6 +74,7 @@
     align-items: center;
     justify-content: center;
     white-space: nowrap;
+    flex-wrap: nowrap;
 
     @include mobile {
       column-gap: 10px;
@@ -101,7 +102,7 @@
 
         content: "";
         position: absolute;
-        top: 25%;
+        top: 15%;
         left: -13%;
         background-color: #0dc268;
         border-radius: 50%;
