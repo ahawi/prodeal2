@@ -1073,6 +1073,13 @@ h4,
   border: 1px solid transparent;
   border-radius: var(--fieldInputBorderRadius);
   width: 100%;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-image: url("../images/arrow-down.svg");
+  background-position: right 10px center;
+  background-repeat: no-repeat;
+  background-size: 14px 7px;
   font-size: 16px;
   color: var(--color-dark);
 }
@@ -1314,14 +1321,14 @@ h4,
   .soc1als__item:hover {
     color: var(--color-gray);
     background-color: var(--color-light);
-    transition-duration: var(--transition-duration);
+    transition-duration: 0.2s;
   }
 }
 @media (hover: none) {
   .soc1als__item:active {
     color: var(--color-gray);
     background-color: var(--color-light);
-    transition-duration: var(--transition-duration);
+    transition-duration: 0.2s;
   }
 }
 .soc1als__link {

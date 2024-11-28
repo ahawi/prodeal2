@@ -17,7 +17,7 @@
     @include hover {
       color: var(--color-gray);
       background-color: var(--color-light);
-      transition-duration: var(--transition-duration);
+      transition-duration: 0.2s;
     }
   }
 
