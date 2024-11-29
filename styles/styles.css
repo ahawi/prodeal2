@@ -915,8 +915,7 @@ h4,
     padding-top: 32px;
   }
 }
-
-.how-it-works-card {
+.how-it-works__card {
   display: flex;
   -moz-column-gap: 16px;
        column-gap: 16px;
