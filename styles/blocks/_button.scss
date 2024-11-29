@@ -40,4 +40,33 @@
       color: var(--color-light);
     }
   }
+
+  &--modal1 {
+    color: var(--color-light);
+    background-color: var(--color-accent);
+    height: 40px;
+    font-size: 16px;
+    padding-inline: 20px;
+    white-space: nowrap;
+
+    @include hover {
+      background-color: var(--color-dark);
+      color: var(--color-light);
+    }
+  }
+
+  &--modal2 {
+    color: var(--color-dark);
+    background-color: var(--color-light);
+    border: 1px solid #e0e2e8;
+    height: 40px;
+    font-size: 16px;
+    font-weight: 500;
+    padding-inline: 20px;
+
+    @include hover {
+      background-color: var(--color-dark);
+      color: var(--color-light);
+    }
+  }
 }

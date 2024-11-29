@@ -117,4 +117,11 @@
       height: 48px !important;
     }
   }
+
+  &__burger-button {
+    border: none;
+    width: 32px;
+    aspect-ratio: 1;
+    background: url("../../images/profile.svg") center/contain no-repeat;
+  }
 }
