@@ -160,3 +160,11 @@ svg * {
     scroll-behavior: auto !important;
   }
 }
+
+select option[disabled][selected][hidden] {
+  background-color: rgb(240, 240, 240);  /* Светлый фон для плейсхолдера */
+  color: rgb(108, 12, 12);                /* Цвет текста */
+  font-style: italic;                     /* Курсив */
+}
+
+

@@ -36,6 +36,6 @@
   }
 
   .item__cards-item:nth-of-type(3) .info__card-link-title::after {
-    content: none; /* Убираем контент псевдоэлемента */
+    content: none;
   }
 }

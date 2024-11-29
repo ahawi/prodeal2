@@ -96,15 +96,3 @@ function formatInput(input) {
     input.value = value;
   });
 }
-
-// function formatInput(input) {
-//   input.addEventListener("input", function () {
-//     let value = input.value.replace(/[^0-9,]/g, "");
-
-//     // Присваиваем отформатированное значение обратно в input
-//     input.value = value;
-//   });
-// }
-
-// // Выбираем все элементы с атрибутом data-js-parameters и применяем к ним функцию formatInput
-// document.querySelectorAll("[data-js-parameters]").forEach(formatInput);
