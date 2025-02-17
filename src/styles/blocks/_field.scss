@@ -1,0 +1,74 @@
+@use '../helpers/' as *;
+
+.field {
+  --fieldInputBorderRadius: 6px;
+  --fieldInputBgColor: #00103d1f;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 7px;
+
+  @include tablet {
+    padding-bottom: 10px;
+  }
+
+  &__input {
+    width: 100%;
+    height: var(--input-height);
+    padding-inline: 11px;
+    border: 1px solid transparent;
+    border-radius: var(--fieldInputBorderRadius);
+    cursor: pointer;
+
+    &-large {
+      height: var(--input-height-large);
+    }
+
+    @include hover {
+      background-color: var(--color-accent);
+
+      &::placeholder {
+        color: var(--color-light);
+        transition-duration: var(--transition-duration);
+      }
+    }
+
+    &:focus-visible {
+      border-color: var(--color-accent);
+      outline: none;
+    }
+  }
+
+  &__label {
+    color: var(--color-gray);
+    white-space: nowrap;
+  }
+
+  &__select {
+    appearance: none;
+    height: var(--input-height);
+    cursor: pointer;
+    padding-inline: 11px;
+    border: 1px solid transparent;
+    border-radius: var(--fieldInputBorderRadius);
+    width: 100%;
+    position: relative;
+    background-image: url('../images/arrow-down.svg');
+    background-position: right 10px center;
+    background-repeat: no-repeat;
+    background-size: 14px 7px;
+    color: var(--color-dark);
+
+    
+
+    &:focus {
+      outline: none;
+      border-color: var(--color-accent);
+    }
+
+    @include hover {
+      border-color: var(--color-accent);
+      transition-duration: var(--transition-duration);
+    }
+  }
+}

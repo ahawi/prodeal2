@@ -1,0 +1,25 @@
+@use '../helpers/' as *;
+
+.parameters {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+
+  @include tablet {
+    row-gap: 0;
+  }
+
+  &__product-group {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 16px;
+
+    @include tablet {
+      flex-direction: column;
+    }
+
+    @include mobile-s {
+      padding-bottom: 0;
+    }
+  }
+}

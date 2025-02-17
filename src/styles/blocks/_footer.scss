@@ -1,0 +1,89 @@
+@use '../helpers/' as *;
+
+.footer {
+  padding-block: 90px;
+
+  @include tablet {
+    padding-block: 60px;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    column-gap: 30px;
+
+    @include mobile {
+      flex-direction: column;
+      justify-content: center;
+      align-items: start;
+      row-gap: 32px;
+    }
+  }
+
+  &-privacy__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 10px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+  }
+
+  &__link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 30px;
+    line-height: 1;
+
+    @include hover {
+      opacity: 0.8;
+
+      &::after {
+        width: 100%;
+      }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      translate: -50%;
+      width: 0;
+      height: 2px;
+      background-color: currentColor;
+      transition-duration: 0.3s;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 16px;
+    white-space: nowrap;
+
+    @include mobile {
+      align-items: start;
+    }
+  }
+
+  &__soc1als {
+    align-self: end;
+
+    @include mobile {
+      align-self: start;
+    }
+  }
+}
