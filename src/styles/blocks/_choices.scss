@@ -4,6 +4,8 @@
   &__inner {
     border-radius: 6px;
     height: var(--input-height);
+    min-height: 10px;
+    padding: 5.5px 7.5px 3.75px;
     background-color: var(--color-light);
     color: var(--color-gray-dark);
     transition-duration: var(--transition-duration);
