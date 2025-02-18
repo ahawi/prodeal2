@@ -1,3 +1,5 @@
+import IMask from 'imask'
+
 export function applyIMask() {
   const inputNumber = document.querySelector('[data-tel-input]')
   const maskOptions = {

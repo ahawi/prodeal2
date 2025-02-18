@@ -33,10 +33,6 @@
       max-width: 100%;
       justify-content: center;
     }
-
-    @include mobile-s {
-      justify-content: start;
-    }
   }
 
   &__item {

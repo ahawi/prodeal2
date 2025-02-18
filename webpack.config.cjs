@@ -6,11 +6,11 @@ module.exports = {
   mode: process.env.NODE_ENV || 'development',
   entry: ['@babel/polyfill', path.resolve(__dirname, 'src', 'index.js')],
   output: {
-    filename: 'index.js',
+    filename: '[name].js',
     path: path.resolve(__dirname, 'dist'),
     clean: true,
-    assetModuleFilename: 'assets/[name][ext]',
-    publicPath: '/'
+    assetModuleFilename: 'assets/[name].[ext]',
+    publicPath: '/prodeal2/'
   },
   devServer: {
     open: {
@@ -19,7 +19,12 @@ module.exports = {
       }
     },
     port: 8080,
-    static: './dist'
+    static: './dist',
+    hot: true,
+    compress: true,
+    headers: {
+      'Access-Control-Allow-Origin': '*'
+    }
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -34,7 +39,7 @@ module.exports = {
         loader: 'html-loader'
       },
       {
-        test: /\.scss$/i,
+        test: /\.s[ac]ss$/i,
         use: [
           'style-loader',
           'css-loader',
@@ -48,6 +53,11 @@ module.exports = {
           },
           'sass-loader'
         ]
+      },
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
+        include: /node_modules/
       },
       {
         test: /\.woff2?$/i,
@@ -92,7 +102,8 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env']
+            presets: ['@babel/preset-env'],
+            cacheDirectory: true
           }
         }
       }
